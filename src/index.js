@@ -14,7 +14,7 @@ loadMoreBtnEl.addEventListener('click', onLoadMoreBtnClick);
 let hits = 0;
 let page = 1;
 let searchQuery = '';
-let simpleBox = 0;
+// let simpleBox = 0;
 
 async function onSearchFormSubmit(event) {
   event.preventDefault();
