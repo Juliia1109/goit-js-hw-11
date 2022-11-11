@@ -13,6 +13,7 @@ function createMarkup(images) {
         downloads,
       } = image;
       return `
+      
 <div class="photo-card">
 <a class="gallery-item" href="${largeImageURL}">
 <img src="${webformatURL}" alt="${tags}" class="gallery-image" loading="lazy" />
@@ -34,7 +35,9 @@ function createMarkup(images) {
     "${downloads}" 
   </p>
 </div>
+</a>
 </div>
+
        `;
     })
     .join('');

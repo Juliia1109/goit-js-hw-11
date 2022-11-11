@@ -14,6 +14,7 @@ loadMoreBtnEl.addEventListener('click', onLoadMoreBtnClick);
 let hits = 0;
 let page = 1;
 let searchQuery = '';
+let simpleBox = 0;
 
 async function onSearchFormSubmit(event) {
   event.preventDefault();
@@ -38,6 +39,10 @@ async function onSearchFormSubmit(event) {
       outputInformation(data);
       galleryListEl.innerHTML = '';
       createMarkup(data.hits);
+      simpleBox = new SimpleLightbox('.gallery a', {
+        captionDelay: 250,
+        captionData: 'alt',
+      });
     }
 
     if (data.totalHits === 0) {
